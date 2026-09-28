@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "throttled-worklane"
+version = "1.0.0"
+description = "Two-lane priority scheduling against a rate limit, plus cross-process cooperative backoff. Stdlib only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Matt Bowman" }]
+keywords = ["rate-limit", "token-bucket", "priority-queue", "backoff", "scheduling", "stdlib"]
+
+[project.urls]
+Homepage = "https://github.com/hatchlab5/throttled-worklane"
+Repository = "https://github.com/hatchlab5/throttled-worklane"
+
+[tool.setuptools]
+py-modules = ["worklane", "cooldown"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
